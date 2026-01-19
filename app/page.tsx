@@ -1,10 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import { useState } from "react";
 import Image from "next/image";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { SparklesCore } from "@/components/ui/sparkles";
+
+// Memoized sparkles to prevent re-renders when typing
+const MemoizedSparkles = memo(function MemoizedSparkles() {
+  return (
+    <div className="pointer-events-none absolute inset-0 z-0">
+      <SparklesCore
+        id="gaia-sparkles"
+        background="transparent"
+        minSize={0.4}
+        maxSize={1.2}
+        particleDensity={50}
+        className="h-full w-full"
+        particleColor="#F5A623"
+        speed={0.8}
+      />
+    </div>
+  );
+});
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -53,18 +71,7 @@ export default function Home() {
       </div>
 
       {/* Sparkles overlay */}
-      <div className="pointer-events-none absolute inset-0 z-0">
-        <SparklesCore
-          id="gaia-sparkles"
-          background="transparent"
-          minSize={0.4}
-          maxSize={1.2}
-          particleDensity={50}
-          className="h-full w-full"
-          particleColor="#F5A623"
-          speed={0.8}
-        />
-      </div>
+      <MemoizedSparkles />
 
       {/* Content */}
       <div className="flex min-h-screen flex-col items-center justify-between px-6 py-12 md:py-16">
@@ -91,13 +98,49 @@ export default function Home() {
               <p className="mt-6 text-sm font-light tracking-wide text-white/60 md:text-base">
                 Bringing clarity to all your health data.
               </p>
+
+              {/* Social proof - Avatar stack */}
+              <div className="mt-10 flex flex-col items-center gap-3 md:mt-12">
+                <div className="flex items-center">
+                  <div className="flex -space-x-3">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                      alt=""
+                      className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                      alt=""
+                      className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face"
+                      alt=""
+                      className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face"
+                      alt=""
+                      className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
+                    />
+                  </div>
+                </div>
+                <p className="text-sm font-light text-white/70">
+                  Join <span className="text-white">+100</span> early users
+                </p>
+              </div>
+
               <LiquidButton
                 onClick={() => setShowForm(true)}
                 size="xl"
-                className="mt-10 font-light tracking-wide text-white md:mt-12"
+                className="mt-8 font-light tracking-wide text-white"
               >
                 Join the waiting list
               </LiquidButton>
+
+              <p className="mt-8 text-xs font-light tracking-wide text-white/40 md:text-sm">
+                Early access opens soon. Limited seats.
+              </p>
             </div>
           )}
 
