@@ -1,7 +1,6 @@
 "use client";
 
-import React, { memo } from "react";
-import { useState } from "react";
+import React, { memo, useState } from "react";
 import Image from "next/image";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -27,33 +26,11 @@ const MemoizedSparkles = memo(function MemoizedSparkles() {
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || isSubmitting) return;
-
-    setIsSubmitting(true);
-
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbzhOSg7iGiBEIvU3xxgQ4cwqMdJkI5pHBTdooddAE9PPxfIIP-O3Gdlpcp4rHc7xMS7yA/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        }
-      );
-      setIsSuccess(true);
-    } catch (error) {
-      console.error("Error submitting email:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleFormSubmit = () => {
+    setIsSuccess(true);
+    setEmail("");
   };
 
   return (
@@ -114,7 +91,7 @@ export default function Home() {
                       className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
                     />
                     <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face"
+                      src="https://images.unsplash.com/photo-1534528741775-5a69c17a67c6?w=80&h=80&fit=crop&crop=face"
                       alt=""
                       className="h-9 w-9 rounded-full border-2 border-black/40 object-cover"
                     />
@@ -145,35 +122,41 @@ export default function Home() {
           )}
 
           {showForm && !isSuccess && (
-            <form
-              onSubmit={handleSubmit}
-              className="flex w-full max-w-sm flex-col items-center animate-[fadeIn_0.6s_ease-out_forwards]"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                autoFocus
-                className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-4 text-center text-sm font-light text-white placeholder-white/40 backdrop-blur-sm outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10 md:text-base"
-              />
-              <LiquidButton
-                type="submit"
-                disabled={isSubmitting}
-                size="lg"
-                className="mt-6 font-light tracking-wide text-white"
+            <>
+              <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLScuw850G4kzsapELwW93Fv0qBOiafxo3KO1-_rvv_tA-deJGA/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                onSubmit={handleFormSubmit}
+                className="flex w-full max-w-sm flex-col items-center animate-[fadeIn_0.6s_ease-out_forwards]"
               >
-                {isSubmitting ? "..." : "Submit"}
-              </LiquidButton>
-              <button
-                type="button"
-                onClick={() => setShowForm(false)}
-                className="mt-4 text-xs text-white/40 transition-colors duration-300 hover:text-white/60"
-              >
-                Back
-              </button>
-            </form>
+                <input
+                  type="email"
+                  name="entry.2054194558"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  autoFocus
+                  className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-4 text-center text-sm font-light text-white placeholder-white/40 backdrop-blur-sm outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10 md:text-base"
+                />
+                <LiquidButton
+                  type="submit"
+                  size="lg"
+                  className="mt-6 font-light tracking-wide text-white"
+                >
+                  Submit
+                </LiquidButton>
+                <button
+                  type="button"
+                  onClick={() => setShowForm(false)}
+                  className="mt-4 text-xs text-white/40 transition-colors duration-300 hover:text-white/60"
+                >
+                  Back
+                </button>
+              </form>
+              <iframe name="hidden_iframe" className="hidden" />
+            </>
           )}
 
           {isSuccess && (
@@ -185,8 +168,15 @@ export default function Home() {
           )}
         </div>
 
-        {/* Spacer for vertical centering */}
-        <div className="h-8 md:h-10" />
+        {/* Contact footer */}
+        <footer className="z-10">
+          <a
+            href="mailto:contact@temple.am"
+            className="text-xs font-light tracking-wide text-white/40 transition-colors duration-300 hover:text-white/70"
+          >
+            contact@temple.am
+          </a>
+        </footer>
       </div>
 
       {/* Global animation keyframes */}
