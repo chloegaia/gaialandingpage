@@ -25,12 +25,13 @@ const MemoizedSparkles = memo(function MemoizedSparkles() {
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
-  const [email, setEmail] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  const handleFormSubmit = () => {
-    setIsSuccess(true);
-    setEmail("");
+  const handleIframeLoad = () => {
+    if (hasSubmitted) {
+      setIsSuccess(true);
+    }
   };
 
   return (
@@ -122,19 +123,17 @@ export default function Home() {
           )}
 
           {showForm && !isSuccess && (
-            <>
+            <div className="flex w-full max-w-sm flex-col items-center animate-[fadeIn_0.6s_ease-out_forwards]">
               <form
                 action="https://docs.google.com/forms/d/e/1FAIpQLScuw850G4kzsapELwW93Fv0qBOiafxo3KO1-_rvv_tA-deJGA/formResponse"
                 method="POST"
                 target="hidden_iframe"
-                onSubmit={handleFormSubmit}
-                className="flex w-full max-w-sm flex-col items-center animate-[fadeIn_0.6s_ease-out_forwards]"
+                onSubmit={() => setHasSubmitted(true)}
+                className="flex w-full flex-col items-center"
               >
                 <input
                   type="email"
                   name="entry.2054194558"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
                   autoFocus
@@ -147,16 +146,20 @@ export default function Home() {
                 >
                   Submit
                 </LiquidButton>
-                <button
-                  type="button"
-                  onClick={() => setShowForm(false)}
-                  className="mt-4 text-xs text-white/40 transition-colors duration-300 hover:text-white/60"
-                >
-                  Back
-                </button>
               </form>
-              <iframe name="hidden_iframe" className="hidden" />
-            </>
+              <button
+                type="button"
+                onClick={() => setShowForm(false)}
+                className="mt-4 text-xs text-white/40 transition-colors duration-300 hover:text-white/60"
+              >
+                Back
+              </button>
+              <iframe 
+                name="hidden_iframe" 
+                className="hidden" 
+                onLoad={handleIframeLoad}
+              />
+            </div>
           )}
 
           {isSuccess && (
