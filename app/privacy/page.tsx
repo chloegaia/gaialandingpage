@@ -3,9 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Gaia",
+  title: "Privacy Notice - Temple.AM",
   description:
-    "Privacy Policy for Gaia. Learn how we collect, use, and protect your personal data.",
+    "Privacy Notice for Temple.AM. Learn how we collect, use, and protect your personal information.",
 }
 
 export default function PrivacyPage() {
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <Link href="/" aria-label="Back to home">
             <Image
               src="/logo.png"
-              alt="Gaia"
+              alt="Temple.AM"
               width={120}
               height={40}
               className="h-7 w-auto md:h-9"
@@ -46,492 +46,419 @@ export default function PrivacyPage() {
           </Link>
         </header>
 
-        {/* Privacy Policy Content */}
+        {/* Privacy Notice Content */}
         <article className="mt-12 flex-1 md:mt-16">
           <h1 className="font-serif text-3xl font-light tracking-tight text-white md:text-4xl lg:text-5xl text-balance">
-            Privacy Policy
+            Temple.AM Privacy Notice
           </h1>
           <p className="mt-4 text-sm font-light text-white/50">
-            Effective Date: March 2, 2026 &middot; Last Updated: March 2, 2026
+            Last Updated: April 8, 2026
           </p>
 
           <div className="mt-10 space-y-10 text-sm leading-relaxed text-white/70 md:text-base">
-            {/* Section 1 */}
+            {/* Intro */}
             <section>
-              <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                1. Introduction
-              </h2>
-              <p className="mt-4">
-                Welcome to <strong className="text-white/90">Gaia</strong> (the
-                &ldquo;App&rdquo;). We are committed to protecting your privacy
-                and ensuring transparency about how we collect, use, and
-                safeguard your personal data.
+              <p>
+                This Privacy Notice describes how Temple AI Inc. (collectively,
+                &ldquo;Temple.AM,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;)
+                collects, uses, discloses, and otherwise processes information
+                about you. This Privacy Notice applies to information we collect
+                when you access or use our websites (collectively, the
+                &ldquo;Website&rdquo;), the Gaia application and any other mobile
+                applications (each an &ldquo;App&rdquo; and together with the
+                Website, the &ldquo;Services&rdquo;), or when you otherwise
+                interact with us, such as through our customer support channels.
               </p>
-              <p className="mt-3">This Privacy Policy explains:</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  What data we collect when you connect your Garmin account
-                </li>
-                <li>How we use, store, and protect that data</li>
-                <li>Your rights and how to exercise them</li>
-                <li>
-                  How we comply with applicable data protection laws (GDPR,
-                  CCPA, etc.)
-                </li>
-              </ul>
-              <p className="mt-3">
-                By using the App and connecting your Garmin account, you consent
-                to the practices described in this Privacy Policy.
+              <p className="mt-4">
+                This Privacy Notice is effective as of the &ldquo;Last
+                Updated&rdquo; date above. We may change this Privacy Notice from
+                time to time. If we make changes, we will notify you by revising
+                the &ldquo;Last Updated&rdquo; date. Where required by law, we
+                will notify you of changes through the Services or by other means.
               </p>
             </section>
 
-            {/* Section 2 */}
+            {/* Collection of Information */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                2. Data We Collect
+                Collection of Information
               </h2>
 
               <h3 className="mt-6 text-base font-medium text-white/90">
-                2.1 Garmin Connect Data
+                Information You Provide to Us
               </h3>
               <p className="mt-3">
-                When you authorize our App to access your Garmin Connect account
-                via OAuth 2.0, we collect the following personal data:
+                We collect information directly from you when you create an
+                account, request customer support, or otherwise communicate with
+                us. The categories of information we collect include:
               </p>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li>
-                  <strong className="text-white/90">Activity data:</strong>{" "}
-                  steps, distance, heart rate, calories burned, GPS tracks,
-                  elevation gain, workout duration, activity type (running,
-                  cycling, hiking, etc.), pace, cadence, training load, recovery
-                  metrics.
+                  <strong className="text-white/90">
+                    Account Information:
+                  </strong>{" "}
+                  we collect your name, email address, and date of birth.
                 </li>
                 <li>
-                  <strong className="text-white/90">Health metrics:</strong>{" "}
-                  sleep data, stress levels, Body Battery, respiration rate, VO2
-                  Max, hydration, menstrual cycle data (if applicable).
+                  <strong className="text-white/90">User Content:</strong> we
+                  collect and maintain information from the content you provide to
+                  our Services, such as text-based wellness logs, photos, videos,
+                  and any other content that you provide to our Services.
                 </li>
                 <li>
                   <strong className="text-white/90">
-                    Device &amp; account info:
+                    Financial Information:
                   </strong>{" "}
-                  Garmin device model, firmware version, Garmin Connect user ID
-                  (anonymized), time zone.
+                  we rely on third-party payment processors to collect the
+                  financial information used to pay for the Services.
                 </li>
                 <li>
                   <strong className="text-white/90">
-                    Routes &amp; courses:
+                    Communication Information:
                   </strong>{" "}
-                  planned routes, saved courses, waypoints, and training plans
-                  synced from Garmin Connect.
+                  we collect information included in your communications with us,
+                  including retention of chats submitted through our Services.
                 </li>
               </ul>
               <p className="mt-3">
-                We only access data you explicitly authorize via Garmin&apos;s
-                OAuth consent screen.
+                We may also collect any other information you choose to provide.
               </p>
 
               <h3 className="mt-6 text-base font-medium text-white/90">
-                2.2 Account Information
+                Information We Collect Automatically
               </h3>
+              <p className="mt-3">
+                We automatically collect the following categories of information:
+              </p>
               <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Email address</li>
-                <li>Display name (if provided)</li>
-                <li>Profile picture (if provided)</li>
-                <li>Account preferences and settings</li>
+                <li>
+                  <strong className="text-white/90">
+                    Transactional Information:
+                  </strong>{" "}
+                  we keep a history of your transactions with us, including the
+                  dates and amounts paid for the Services.
+                </li>
+                <li>
+                  <strong className="text-white/90">
+                    Internet Activity Information:
+                  </strong>{" "}
+                  we collect information about how you access our Services,
+                  including data about the device and network you use, such as
+                  your hardware model, operating system version, mobile network,
+                  IP address, unique device identifiers, and browser type. We also
+                  collect information about your activity on our Website, App, and
+                  interaction with our communications, such as access times,
+                  browsing behavior (such as pages viewed and links clicked), and
+                  the page you visited before navigating to our Website.
+                </li>
+                <li>
+                  <strong className="text-white/90">
+                    Precise Geolocation Information:
+                  </strong>{" "}
+                  With your consent, we may collect information about the precise
+                  location of your device. You can stop the collection of precise
+                  location information at any time in your device settings.
+                </li>
+                <li>
+                  <strong className="text-white/90">
+                    Information Collected by Cookies and Similar Tracking
+                    Technologies:
+                  </strong>{" "}
+                  We use tracking technologies, such as cookies and pixels, and
+                  software development kits/SDKs to collect information about your
+                  interactions with our Services and communications. These
+                  technologies help us improve our Services and communications,
+                  see which areas and features are popular, count visits, and
+                  track clicks. You may be able to adjust your browser settings to
+                  remove or reject browser cookies. Please note that removing or
+                  rejecting cookies could affect the availability and
+                  functionality of our Services.
+                </li>
               </ul>
 
               <h3 className="mt-6 text-base font-medium text-white/90">
-                2.3 Usage &amp; Technical Data
+                Information We Collect from Other Sources
               </h3>
+              <p className="mt-3">
+                We may collect information from the following third-party sources:
+              </p>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li>
-                  App usage patterns (features accessed, session duration)
+                  <strong className="text-white/90">
+                    Third-Party Integrations:
+                  </strong>{" "}
+                  If you connect third-party services to the Services, we may
+                  collect information that you share with us through services. For
+                  example, if you connect Apple Health, Garmin, or Oura accounts
+                  to the Services, we may collect information about your sleep and
+                  physical activity. If you connect your calendar, we will also
+                  receive information about your meetings and appointments.
+                  Additionally, if you create or log into your Temple.AM account
+                  through a third-party platform (such as Apple or Google), we may
+                  have access to certain information from that platform, such as
+                  your name, email address, and calendar information, depending on
+                  your account settings.
                 </li>
                 <li>
-                  Device information (OS version, device type, IP address,
-                  browser type)
+                  <strong className="text-white/90">
+                    Third-Party Partners:
+                  </strong>{" "}
+                  We may collect information from third-party partners. For
+                  example, we may collect contact information and device
+                  identifiers from advertising networks and data analytics
+                  providers.
                 </li>
-                <li>Crash reports and error logs (anonymized)</li>
-                <li>Analytics data (via Firebase Analytics or similar)</li>
+                <li>
+                  <strong className="text-white/90">
+                    Social Media Platforms:
+                  </strong>{" "}
+                  We may also collect information you share when you interact with
+                  us on social media platforms, such as Facebook.
+                </li>
               </ul>
 
               <h3 className="mt-6 text-base font-medium text-white/90">
-                2.4 Location Data
+                Derived Information
               </h3>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  GPS coordinates from Garmin activities (only when you sync
-                  activities with location data).
-                </li>
-                <li>
-                  We do not access real-time location tracking outside of Garmin
-                  activity data.
-                </li>
-              </ul>
+              <p className="mt-3">
+                We may derive information or draw inferences about you based on
+                the information we collect. For example, we may make inferences
+                about your approximate location based on your IP address.
+              </p>
             </section>
 
-            {/* Section 3 */}
+            {/* Use of Information */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                3. How We Use Your Data
+                Use of Information
               </h2>
               <p className="mt-4">
-                We process your personal data for the following purposes:
+                We use the categories of information we collect for the following
+                business and commercial purposes:
               </p>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li>
-                  To sync Garmin activities to our platform and provide core
-                  functionality of the App (contractual necessity).
+                  <strong className="text-white/90">Service Delivery:</strong> we
+                  use information to provide and maintain our Services, including
+                  to offer personal wellness insights, process payments, and
+                  authenticate your account.
                 </li>
                 <li>
-                  To display your activity history, routes, and metrics in the
-                  App (legitimate interest).
+                  <strong className="text-white/90">Communication:</strong> we
+                  use information to communicate with you about Temple.AM and our
+                  Services, including to respond to your questions, inform you of
+                  price or Services changes, and send you other transactional or
+                  relationship messages.
                 </li>
                 <li>
-                  To send routes, courses, and training plans from our App to
-                  your Garmin device (based on your consent via integration
-                  settings).
+                  <strong className="text-white/90">
+                    Marketing and Advertising:
+                  </strong>{" "}
+                  we use information for marketing and advertising, including to
+                  send direct marketing messages and target advertisements to you
+                  on third-party platforms and websites as described in the
+                  &ldquo;Targeted Advertising and Analytics&rdquo; section below.
+                  You can opt out of direct marketing messages we send by
+                  following the instructions in those communications (such as by
+                  clicking &ldquo;unsubscribe&rdquo; in the emails) or by
+                  reaching out via the &ldquo;Contact Us&rdquo; section below.
                 </li>
                 <li>
-                  To analyze usage patterns and improve features and performance
-                  of the App (legitimate interest, with minimal and aggregated
-                  data where possible).
+                  <strong className="text-white/90">
+                    Research and Development:
+                  </strong>{" "}
+                  we use information to monitor and analyze Website trends, usage,
+                  and activities, improve our Website and Services, and generate
+                  de-identified or aggregated data. We also use information to
+                  develop new products and services, including to train our
+                  artificial intelligence models.
                 </li>
                 <li>
-                  To provide customer support and troubleshoot issues
-                  (contractual necessity).
+                  <strong className="text-white/90">
+                    Protection and Compliance:
+                  </strong>{" "}
+                  we use information to detect, investigate, and help prevent
+                  security incidents and other malicious, deceptive, fraudulent,
+                  or illegal activity, help protect the rights and property of
+                  Temple.AM and others, and comply with our legal and financial
+                  obligations.
                 </li>
                 <li>
-                  To ensure security, prevent abuse, and detect fraud (legal
-                  obligation and legitimate interest).
+                  <strong className="text-white/90">Notice/Consent:</strong> we
+                  may also use information in other circumstances after giving you
+                  notice and/or getting your consent.
                 </li>
-                <li>To comply with legal and regulatory obligations.</li>
               </ul>
-              <p className="mt-4 font-medium text-white/90">
-                We do not sell your personal data. We do not use your data for
-                third-party advertising.
-              </p>
             </section>
 
-            {/* Section 4 */}
+            {/* Targeted Advertising and Analytics */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                4. Data Sharing &amp; Transfers to Garmin
+                Targeted Advertising and Analytics
               </h2>
-
-              <h3 className="mt-6 text-base font-medium text-white/90">
-                4.1 Transfer to Garmin Connect
-              </h3>
-              <p className="mt-3">
-                When you use our App to upload routes, workouts, or training
-                plans to your Garmin Connect account, your data is transferred
-                to Garmin. You expressly consent to this transfer when you
-                connect your Garmin account and use the synchronization
-                features.
+              <p className="mt-4">
+                We engage others to provide analytics services, serve
+                advertisements, and perform related services across the web and in
+                mobile applications. These entities may use cookies, web beacons,
+                device identifiers, and other technologies to collect information
+                about your use of our Website, including your IP address, web
+                browser and mobile network information, pages viewed, time spent
+                on pages, and links clicked. This information is used to deliver
+                advertising targeted to your interests on other companies&apos;
+                sites or mobile apps and to analyze and track data, determine the
+                popularity of certain content, and better understand your
+                activity.
               </p>
-              <p className="mt-3">Data transferred may include:</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Planned routes, courses, and workout files (e.g., GPX, FIT,
-                  TCX formats).
-                </li>
-                <li>Training plans and structured workouts.</li>
-                <li>Any user-generated content you choose to sync.</li>
-              </ul>
-              <p className="mt-3">
-                Garmin processes your data in accordance with its own privacy
-                policy, available at:{" "}
+              <p className="mt-4">
+                You can also learn more about interest-based ads, or opt out of
+                having your web browsing information used for behavioral
+                advertising purposes by companies that participate in the Digital
+                Advertising Alliance, by visiting{" "}
                 <a
-                  href="https://www.garmin.com/privacy/connect"
+                  href="https://www.aboutads.info/choices"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gaia-amber underline underline-offset-2 transition-colors hover:text-gaia-warm"
                 >
-                  garmin.com/privacy/connect
+                  www.aboutads.info/choices
                 </a>
-              </p>
-
-              <h3 className="mt-6 text-base font-medium text-white/90">
-                4.2 Third-Party Service Providers
-              </h3>
-              <p className="mt-3">
-                We may share your data with trusted service providers solely to
-                operate and improve the App, including:
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Cloud hosting providers (e.g., AWS, Google Cloud, Azure) for
-                  secure data storage and infrastructure.
-                </li>
-                <li>
-                  Analytics providers (e.g., Google Analytics, Mixpanel) for
-                  aggregated usage statistics.
-                </li>
-                <li>
-                  Customer support tools (e.g., Zendesk, Intercom) for handling
-                  support requests.
-                </li>
-                <li>
-                  Email service providers (e.g., SendGrid, Mailgun) for
-                  transactional emails and notifications.
-                </li>
-              </ul>
-              <p className="mt-3">
-                These providers are contractually required to use your data only
-                for the specified purposes, protect your data with appropriate
-                technical and organizational measures, and comply with applicable
-                data protection laws.
-              </p>
-
-              <h3 className="mt-6 text-base font-medium text-white/90">
-                4.3 Legal Requirements
-              </h3>
-              <p className="mt-3">
-                We may disclose your data when required to do so by law,
-                regulation, court order, or governmental request. Where legally
-                permitted, we will attempt to notify you of such disclosure.
+                .
               </p>
             </section>
 
-            {/* Section 5 */}
+            {/* Disclosure of Information */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                5. Data Security
+                Disclosure of Information
               </h2>
-              <p className="mt-4">
-                We implement industry-standard security measures to protect your
-                personal data, including:
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Encryption in transit using TLS for all connections.</li>
+              <p className="mt-4">We disclose information as follows:</p>
+              <ul className="mt-2 list-disc space-y-2 pl-5">
                 <li>
-                  Encryption at rest (e.g., AES-256) for stored data where
-                  applicable.
+                  <strong className="text-white/90">Vendors:</strong> we disclose
+                  information to vendors, service providers, contractors and
+                  consultants that need this information to provide services to
+                  us, such as companies that assist us with web hosting, payment
+                  processing, fraud prevention, customer service, data
+                  enrichment, analytics, and marketing and advertising.
                 </li>
                 <li>
-                  OAuth 2.0 for secure authorization with Garmin Connect.
+                  <strong className="text-white/90">
+                    Advertising Partners:
+                  </strong>{" "}
+                  we disclose information to third parties for the purposes
+                  described in the Marketing and Advertising subsection above.
                 </li>
                 <li>
-                  Role-based access controls and restricted internal access to
-                  production data.
+                  <strong className="text-white/90">
+                    Professional Advisors:
+                  </strong>{" "}
+                  we disclose information to our lawyers and other professional
+                  advisors where necessary to obtain advice or otherwise protect
+                  and manage our business interests.
                 </li>
                 <li>
-                  Regular security reviews and vulnerability monitoring.
+                  <strong className="text-white/90">Legal Authorities:</strong>{" "}
+                  we may disclose information to legal authorities and others for
+                  the purposes described in the Protection and Compliance
+                  subsection above, including if we believe that disclosure is in
+                  accordance with, or required by, any applicable law or legal
+                  process, including lawful requests by public authorities to meet
+                  national security or law enforcement requirements and if we
+                  believe that your actions are inconsistent with our user
+                  agreements or policies, if we believe that you have violated the
+                  law, or if we believe it is necessary to protect the rights,
+                  property, and safety of Temple.AM, our users, the public, or
+                  others.
+                </li>
+                <li>
+                  <strong className="text-white/90">
+                    Corporate Transactions:
+                  </strong>{" "}
+                  we reserve the right to disclose information in connection with
+                  or during negotiations of certain corporate transactions,
+                  including the merger, sale of company assets, financing, or
+                  acquisition of all or a portion of our business by another
+                  company.
+                </li>
+                <li>
+                  <strong className="text-white/90">Affiliates:</strong> we
+                  reserve the right to disclose information between and among
+                  Temple.AM and any current or future parents, affiliates,
+                  subsidiaries, and other companies under common control and
+                  ownership.
+                </li>
+                <li>
+                  <strong className="text-white/90">Consent:</strong> we may
+                  disclose information when we have your consent or you direct us
+                  to do so.
                 </li>
               </ul>
-              <p className="mt-3">
-                In the event of a data breach that is likely to result in a high
-                risk to your rights and freedoms, we will notify you and
-                relevant authorities in accordance with applicable laws.
+              <p className="mt-4">
+                We also disclose de-identified information that cannot reasonably
+                be used to identify you.
               </p>
             </section>
 
-            {/* Section 6 */}
+            {/* Transfer of Information */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                6. Data Retention
+                Transfer of Information
               </h2>
               <p className="mt-4">
-                We retain your personal data only for as long as necessary to
-                fulfill the purposes described in this Privacy Policy or as
-                required by law.
-              </p>
-              <p className="mt-3">Indicative retention periods:</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  <strong className="text-white/90">
-                    Garmin activity and health data:
-                  </strong>{" "}
-                  retained for as long as your account is active, plus up to 90
-                  days after account deletion (unless you request earlier
-                  deletion).
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Account information:
-                  </strong>{" "}
-                  retained until your account is deleted.
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Support communications:
-                  </strong>{" "}
-                  typically retained for up to 3 years for support history and
-                  legal purposes.
-                </li>
-                <li>
-                  Aggregated or anonymized data that cannot be linked back to
-                  you may be retained indefinitely.
-                </li>
-              </ul>
-              <p className="mt-3">
-                You can request deletion of your data at any time (see Section
-                8).
+                Temple.AM is headquartered in the United States and we have
+                operations and vendors in the United States and other countries.
+                Therefore, we and our vendors may transfer your personal
+                information to, or store or access it in, jurisdictions that may
+                not provide equivalent levels of data protection to your home
+                jurisdiction.
               </p>
             </section>
 
-            {/* Section 7 */}
+            {/* Applicant Information */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                7. International Data Transfers
+                Applicant Information
               </h2>
               <p className="mt-4">
-                Your information may be processed and stored in countries other
-                than your country of residence, including the United States and
-                the European Union.
+                When you apply for a position with Temple.AM, we collect the
+                information that you provide in connection with your application.
+                This includes name, contact information, professional credentials
+                and skills, educational and work history, and other information
+                that may be included in a resume or provided during interviews
+                (which may be recorded). This may also include demographic or
+                diversity information that you voluntarily provide. We may also
+                conduct background checks and receive related information.
               </p>
-              <p className="mt-3">
-                Where required by law, we implement safeguards such as:
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Standard Contractual Clauses (SCCs) approved by the European
-                  Commission.
-                </li>
-                <li>
-                  Adequacy decisions or equivalent mechanisms for cross-border
-                  transfers.
-                </li>
-                <li>Your explicit consent when necessary.</li>
-              </ul>
-            </section>
-
-            {/* Section 8 */}
-            <section>
-              <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                8. Your Rights
-              </h2>
               <p className="mt-4">
-                Depending on your jurisdiction (e.g., EU/EEA, UK, California),
-                you may have the following rights regarding your personal data:
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  <strong className="text-white/90">Right of access:</strong>{" "}
-                  Obtain confirmation and a copy of personal data we hold about
-                  you.
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Right to rectification:
-                  </strong>{" "}
-                  Correct incomplete or inaccurate data.
-                </li>
-                <li>
-                  <strong className="text-white/90">Right to erasure:</strong>{" "}
-                  Request deletion of your personal data, subject to legal
-                  retention obligations.
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Right to restrict processing:
-                  </strong>{" "}
-                  Ask us to limit processing under certain circumstances.
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Right to data portability:
-                  </strong>{" "}
-                  Receive your data in a structured, commonly used,
-                  machine-readable format.
-                </li>
-                <li>
-                  <strong className="text-white/90">Right to object:</strong>{" "}
-                  Object to certain processing activities, including certain
-                  analytics.
-                </li>
-                <li>
-                  <strong className="text-white/90">
-                    Right to withdraw consent:
-                  </strong>{" "}
-                  Withdraw consent at any time, without affecting prior lawful
-                  processing.
-                </li>
-              </ul>
-              <p className="mt-4">To exercise these rights, you can:</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Use in-app privacy/settings tools if available.
-                </li>
-                <li>
-                  Or contact us at:{" "}
-                  <a
-                    href="mailto:contact@temple.am"
-                    className="text-gaia-amber underline underline-offset-2 transition-colors hover:text-gaia-warm"
-                  >
-                    contact@temple.am
-                  </a>
-                </li>
-              </ul>
-              <p className="mt-3">
-                We will respond to your request within the timeframe required by
-                applicable law. You may also have the right to lodge a complaint
-                with your local data protection authority.
+                We use applicants&apos; information to facilitate our recruitment
+                activities and process applications, including evaluating
+                candidates and monitoring recruitment and hiring statistics. We
+                use successful candidates&apos; information to administer the
+                employment or independent contractor relationship. We may also use
+                and disclose applicants&apos; information (a) to improve our
+                Website, (b) as otherwise necessary to comply with relevant laws,
+                (c) to respond to subpoenas or warrants served on Temple.AM, and
+                (d) to protect and defend the rights or property of Temple.AM or
+                others.
               </p>
             </section>
 
-            {/* Section 9 */}
+            {/* Contact Us */}
             <section>
               <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                9. Children&apos;s Privacy
+                Contact Us
               </h2>
               <p className="mt-4">
-                The App is not intended for children under the age of 13 (or
-                under 16 where applicable under local law). We do not knowingly
-                collect personal data from children. If you believe a child has
-                provided us with personal data, please contact us so we can
-                delete it.
+                If you have any questions about this Privacy Notice, please
+                contact us at{" "}
+                <a
+                  href="mailto:contact@temple.am"
+                  className="text-gaia-amber underline underline-offset-2 transition-colors hover:text-gaia-warm"
+                >
+                  contact@temple.am
+                </a>
+                .
               </p>
-            </section>
-
-            {/* Section 10 */}
-            <section>
-              <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                10. Changes to This Privacy Policy
-              </h2>
-              <p className="mt-4">
-                We may update this Privacy Policy from time to time. Changes
-                will be posted within the App and/or on our website with an
-                updated &ldquo;Last Updated&rdquo; date.
-              </p>
-              <p className="mt-3">
-                If we make material changes that affect your rights, we will
-                notify you via email or in-app notification. Your continued use
-                of the App after such changes means you accept the updated
-                Policy.
-              </p>
-            </section>
-
-            {/* Section 11 */}
-            <section>
-              <h2 className="font-serif text-xl font-light text-white md:text-2xl">
-                11. Contact Us
-              </h2>
-              <p className="mt-4">
-                If you have questions, concerns, or requests regarding this
-                Privacy Policy or your personal data, you can contact us at:
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Email:{" "}
-                  <a
-                    href="mailto:contact@temple.am"
-                    className="text-gaia-amber underline underline-offset-2 transition-colors hover:text-gaia-warm"
-                  >
-                    contact@temple.am
-                  </a>
-                </li>
-                <li>
-                  Website:{" "}
-                  <a
-                    href="https://gaia.temple.am/privacy"
-                    className="text-gaia-amber underline underline-offset-2 transition-colors hover:text-gaia-warm"
-                  >
-                    gaia.temple.am/privacy
-                  </a>
-                </li>
-              </ul>
             </section>
           </div>
         </article>
@@ -540,7 +467,7 @@ export default function PrivacyPage() {
         <footer className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between">
             <p className="text-xs font-light text-white/30">
-              &copy; {new Date().getFullYear()} Gaia. All rights reserved.
+              &copy; {new Date().getFullYear()} Temple.AM. All rights reserved.
             </p>
             <a
               href="mailto:contact@temple.am"
