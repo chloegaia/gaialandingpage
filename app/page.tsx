@@ -2,6 +2,7 @@
 
 import React, { memo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { SparklesCore } from "@/components/ui/sparkles";
 
@@ -172,13 +173,20 @@ export default function Home() {
         </div>
 
         {/* Contact footer */}
-        <footer className="z-10">
+        <footer className="z-10 flex items-center gap-2">
           <a
             href="mailto:contact@temple.am"
             className="text-xs font-light tracking-wide text-white/40 transition-colors duration-300 hover:text-white/70"
           >
             contact@temple.am
           </a>
+          <span className="text-xs text-white/30">·</span>
+          <Link
+            href="/privacy"
+            className="text-xs font-light tracking-wide text-white/40 transition-colors duration-300 hover:text-white/70"
+          >
+            Privacy
+          </Link>
         </footer>
       </div>
 
